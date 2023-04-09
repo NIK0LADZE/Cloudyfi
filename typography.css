@@ -7,3 +7,8 @@
     font-family: "Noto Sans Georgian SemiBold";
     src: url("./fonts/NotoSansGeorgian/NotoSansGeorgian-SemiBold.ttf");
 }
+
+@font-face {
+    font-family: "Alk Sanet";
+    src: url("./fonts/AlkSanet/alk-sanet.ttf");
+}

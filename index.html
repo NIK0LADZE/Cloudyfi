@@ -8,7 +8,8 @@
     <link rel="stylesheet" href="./css/tailwind.css">
 </head>
 <body class="bg-customGray-100">
-    <header class="flex justify-between fixed top-0 w-full px-24 h-20 bg-white bg-opacity-40 backdrop-blur-sm z-20 shadow-header">
+    <header
+        class="flex justify-between fixed top-0 w-full px-24 h-20 bg-white bg-opacity-40 backdrop-blur-sm z-20 shadow-header">
         <div class="bg-logo w-logo bg-no-repeat bg-center"></div>
         <nav>
             <ul class="flex">
@@ -20,14 +21,62 @@
         </nav>
     </header>
     <main>
-        <div class="absolute top-0 bg-light-blue-shape w-[63%] bg-no-repeat bg-right right-[3%] aspect-[914/1158] bg-cover
-                    after:content-[''] after:absolute after:bg-blue-shape after:w-[95%] after:bg-no-repeat after:bg-right after:right-0 after:top-[27%] after:aspect-[861/763] after:bg-cover after:z-10"></div>
-        <div class="absolute top-0 bg-purple-shape w-[56%] bg-no-repeat bg-left-top aspect-[811/983] bg-cover"></div>
-        <div class="relative flex flex-col lg:w-[55%] lg:mt-[250px] lg:ml-[7%] xl:mt-[350px] 2xl:mt-[450px] z-10">
-            <div class="bg-cloudyfi lg:w-5/12 2xl:w-4/12 aspect-[364/101] bg-cover bg-no-repeat bg-center lg:ml-[20%] 2xl:ml-[25%]"></div>
-            <h2 class="text-center lg:text-4xl xl:text-[40px] 2xl:text-[44px] xl:leading-[54px] text-customGray-200 text-shadow">მიიღე მაღალი წარმადობის <br> უკაბელო ქსელი (WiFi), იქ <br> სადაც ხარ!</h2>
-            <button class="w-fit mt-7 px-[18px] py-[14px] self-center text-[20px] text-customGray-900 bg-customGray-200 rounded-[10px] shadow-card">სერვისები</button>
+        <div class="absolute top-0 bg-shapes w-full bg-no-repeat aspect-[1440/3254] bg-cover"></div>
+        <div class="relative flex flex-col lg:w-[55%] mt-[30%] lg:ml-[7%] z-10">
+            <div
+                class="bg-cloudyfi lg:w-5/12 2xl:w-4/12 aspect-[364/101] bg-cover bg-no-repeat bg-center lg:ml-[20%] 2xl:ml-[25%]">
+            </div>
+            <h1
+                class="text-center lg:text-4xl xl:text-[40px] 2xl:text-[44px] xl:leading-[54px] text-customGray-200 text-shadow">
+                მიიღე მაღალი წარმადობის <br> უკაბელო ქსელი (WiFi), იქ <br> სადაც ხარ!</h1>
+            <button
+                class="w-fit mt-7 px-[18px] py-[14px] self-center text-[20px] text-customGray-900 bg-customGray-200 rounded-[10px] shadow-card">სერვისები</button>
         </div>
+        <section class="relative mt-[25%] 2xl:mt-[31%]">
+            <h2>ჩვენ შესახებ</h2>
+            <div class="card">
+                <p class="text-2xl text-center text-customBlack-900">
+                    ქლაუდიფაი არის მაღალ კვალიფიციური კადრებით დაკომპლექტებული გუნდი, რომლის მისიაა სერვისი გაუწიოს
+                    ხარისხიანი უკაბელო ქსელის (WiFi) მიმართულებით. მომხმარებელს დაუგეგმოს, გაუმართოს და მხარდაჭერა
+                    გაუწიოს Wifi-ს წარმატებით ფუნქციონირებაში.
+                </p>
+            </div>
+        </section>
+        <section class="relative mt-[150px]">
+            <h2>სერვისები</h2>
+            <div class="flex flex-wrap justify-center gap-x-[125px] px-[12%] 2xl:px-[15%]">
+                <div class="card flex flex-col items-center mx-0 px-6 pt-9 pb-5 w-64 min-h-[256px]">
+                    <img class="w-[76px]" src="./assets/serviceLogo1.svg" alt="">
+                    <p class="pt-4 text-center text-customBlack-900">
+                        უკვე არსებული მოწყობილობების მართვა და მიბმა cloudyfi-ს სერვისებთან
+                    </p>
+                </div>
+                <div class="card flex flex-col items-center mx-0 px-6 pt-9 pb-5 w-64 min-h-[256px]">
+                    <img class="w-[76px]" src="./assets/serviceLogo2.svg" alt="">
+                    <p class="pt-4 text-center text-customBlack-900">
+                        უკაბელო ქსელის (WiFi) დაგეგმარება, გამართვა, მონიტორინგი და მხარდაჭერა
+                    </p>
+                </div>
+                <div class="card flex flex-col items-center mx-0 px-6 pt-9 pb-5 w-64 min-h-[256px]">
+                    <img class="w-[76px]" src="./assets/serviceLogo3.svg" alt="">
+                    <p class="pt-4 text-center text-customBlack-900">
+                        ერთჯერადი WiFi პაროლების პოლიტიკის დანერგვა
+                    </p>
+                </div>
+                <div class="card flex flex-col items-center mx-0 px-6 pt-9 pb-5 w-64 min-h-[256px]">
+                    <img class="w-[76px]" src="./assets/serviceLogo4.svg" alt="">
+                    <p class="pt-4 text-center text-customBlack-900">
+                        ბრენდირებული სტუმრის პორტალის გამართვა
+                    </p>
+                </div>
+                <div class="card flex flex-col items-center mx-0 px-6 pt-9 pb-5 w-64 min-h-[256px]">
+                    <img class="w-[76px]" src="./assets/serviceLogo5.svg" alt="">
+                    <p class="pt-4 text-center text-customBlack-900">
+                        WiFi-ს სახელისა თუ პაროლების ცვლილება
+                    </p>
+                </div>
+            </div>
+        </section>
     </main>
 </body>
 </html>

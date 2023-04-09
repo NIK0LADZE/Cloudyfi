@@ -7,18 +7,24 @@ module.exports = {
   theme: {
     extend: {
       colors: {
+        customWhite: {
+          0.4: 'rgba(255, 255, 255, 0.4)'
+        },
         customGray: {
           100: '#EBEBEB',
           200: '#F4F4F4',
+          300: 'rgba(162, 162, 162, 0.8)',
           900: '#515151'
+        },
+        customBlack: {
+          100: '#353535',
+          900: '#222222',
         }
       },
       backgroundImage: {
-        'logo': 'url(../assets/logo.png)',
-        'cloudyfi': 'url(../assets/cloudyfi.svg)',
-        'light-blue-shape': 'url(../assets/light-blue-shape.svg)',
-        'purple-shape': 'url(../assets/purple-shape.svg)',
-        'blue-shape': 'url(../assets/blue-shape.svg)',
+        logo: 'url(../assets/logo.png)',
+        shapes: 'url(../assets/shapes.svg)',
+        cloudyfi: 'url(../assets/cloudyfi.svg)'
       },
       boxShadow: {
         header: '0px 2px 4px rgba(148, 148, 148, 0.25)',

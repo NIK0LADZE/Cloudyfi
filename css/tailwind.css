@@ -35,7 +35,7 @@
 
 @layer components {
     .menu-item {
-        @apply py-4 text-sm leading-8 cursor-pointer;
+        @apply py-4 text-base leading-8 cursor-pointer;
     }
 
     .text-shadow {

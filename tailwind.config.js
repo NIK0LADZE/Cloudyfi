@@ -27,7 +27,7 @@ module.exports = {
         }
       },
       backgroundImage: {
-        logo: 'url(../assets/logo.png)',
+        logo: 'url(../assets/logo.svg)',
         shapes: 'url(../assets/shapes.svg)',
         cloudyfi: 'url(../assets/cloudyfi.svg)'
       },

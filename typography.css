@@ -12,3 +12,8 @@
     font-family: "Alk Sanet";
     src: url("./fonts/AlkSanet/alk-sanet.ttf");
 }
+
+@font-face {
+    font-family: "Open Sans";
+    src: url("./fonts/OpenSans/OpenSans-Regular.ttf");
+}

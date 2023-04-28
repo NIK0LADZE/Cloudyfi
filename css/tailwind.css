@@ -19,6 +19,18 @@
     p {
         font-family: "Noto Sans Georgian Medium", sans-serif;
     }
+
+    textarea::-webkit-resizer {
+        display: none;
+    }
+
+    textarea::-moz-resizer {
+        display: none;
+    }
+
+    textarea::-ms-resizer {
+        display: none;
+    }
 }
 
 @layer components {

@@ -22,7 +22,7 @@
     </header>
     <main>
         <div class="absolute top-0 bg-shapes w-full bg-no-repeat aspect-[1440/3254] bg-cover"></div>
-        <div class="relative flex flex-col lg:w-[55%] mt-[45vh] lg:ml-[7%] z-10">
+        <div class="relative flex flex-col lg:w-[55%] mt-[35vh] lg:ml-[7%] z-10">
             <div
                 class="bg-cloudyfi lg:w-5/12 2xl:w-4/12 aspect-[364/101] bg-cover bg-no-repeat bg-center lg:ml-[20%] 2xl:ml-[25%]">
             </div>
@@ -103,6 +103,34 @@
                         დაგვიკავშირდი
                     </p>
                 </div>
+            </div>
+        </section>
+        <section class="relative mt-[150px]">
+            <h2>დაგვიკავშირდი</h2>
+            <div class="flex mt-[75px] mx-24">
+                <div class="mt-[152px] w-1/2">
+                    <div class="flex items-center">
+                        <img src="./assets/phone.svg" alt="">
+                        <span class="ml-14 uppercase text-2xl font-openSans">Phone</span>
+                        <span class="ml-14 text-2xl font-openSans">+995 599 56 56</span>
+                    </div>
+                    <div class="flex mt-14 items-center">
+                        <img src="./assets/email.svg" alt="">
+                        <span class="ml-14 uppercase text-2xl font-openSans">Email</span>
+                        <span class="ml-16 text-2xl font-openSans">Cloudify@gmail.com</span>
+                    </div>
+                </div>
+                <form class="card w-1/2 px-7 py-8">
+                    <label class="block ml-2 mb-[14px] text-xl" for="fullName">სახელი:</label>
+                    <input class="w-full text-xl mb-[14px] px-5 py-3 rounded-[12px] shadow-input" type="text" name="fullName" placeholder="სახელი">
+                    <label class="block ml-2 mb-[14px] text-xl" for="email">შენი ელ-ფოსტა:</label>
+                    <input class="w-full text-xl mb-[14px] px-5 py-3 rounded-[12px] shadow-input" type="email" name="email" placeholder="ელ-ფოსტა">
+                    <label class="block ml-2 mb-[14px] text-xl" for="title">სათაური:</label>
+                    <input class="w-full text-xl mb-[14px] px-5 py-3 rounded-[12px] shadow-input" type="text" name="title" placeholder="სათაური">
+                    <label class="block ml-2 mb-[14px] text-xl" for="message">შეტყობინება:</label>
+                    <textarea class="w-full text-xl px-5 py-3 rounded-[12px] shadow-input" name="message" cols="30" rows="10" placeholder="შეიყვანეთ ტექსტი"></textarea>
+                    <button class="relative card mt-4 px-8 py-3 w-auto text-white text-xl bg-customGray-800 left-full -translate-x-full border-none" type="submit">გაგზავნა</button>
+                </form>
             </div>
         </section>
     </main>

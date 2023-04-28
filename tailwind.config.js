@@ -7,7 +7,8 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        openSans: 'Open Sans'
+        openSans: 'Open Sans',
+        alkSanet: 'Alk Sanet'
       },
       colors: {
         customWhite: {
@@ -38,6 +39,9 @@ module.exports = {
       width: {
         logo: '70px',
         cloudyfi: '364px'
+      },
+      borderColor: {
+        footer: 'rgba(162, 162, 162, 0.8)'
       }
     },
   },

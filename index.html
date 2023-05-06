@@ -7,141 +7,145 @@
     <title>Cloudyfi</title>
     <link rel="stylesheet" href="./css/tailwind.css">
 </head>
-<body class="bg-customGray-100">
+<body class="bg-customGray-100 font-notoSansGeorgian font-semibold bg-shapesMobile lg:bg-shapes bg-no-repeat bg-full bg-top">
     <header
-        class="flex justify-between fixed top-0 w-full px-24 h-16 bg-white bg-opacity-40 backdrop-blur-sm z-20 shadow-header">
-        <div class="bg-logo w-logo bg-no-repeat bg-center"></div>
-        <nav>
-            <ul class="flex">
-                <li class="mr-8 menu-item">ჩვენ შესახებ</li>
-                <li class="mr-8 menu-item">სერვისები</li>
-                <li class="mr-8 menu-item">პაკეტები</li>
-                <li class="menu-item">დაგვიკავშირდი</li>
-            </ul>
-        </nav>
+        class="flex justify-center fixed top-0 w-full h-14 lg:h-16 bg-white bg-opacity-40 backdrop-blur-sm z-20 shadow-header">
+        <div class="flex max-w-[1800px] justify-between fixed top-0 w-full px-4 lg:px-24 h-14 lg:h-16">
+            <div class="bg-logo w-logoMobile lg:w-logo bg-no-repeat bg-center bg-contain"></div>
+            <nav>
+                <ul class="flex h-full items-center">
+                    <li class="hidden lg:block mr-8 menu-item">ჩვენ შესახებ</li>
+                    <li class="mr-3 lg:mr-8 menu-item">სერვისები</li>
+                    <li class="mr-3 lg:mr-8 menu-item">პაკეტები</li>
+                    <li class="menu-item">დაგვიკავშირდი</li>
+                </ul>
+            </nav>
+        </div>
     </header>
     <main>
-        <div class="absolute top-0 bg-shapes w-full bg-no-repeat aspect-[1440/3254] bg-cover"></div>
-        <div class="relative flex flex-col lg:w-[55%] mt-[35vh] lg:ml-[7%] z-10">
+        <div class="relative flex flex-col lg:w-[55%] mt-[25vh] md:mt-[30vh] lg:ml-[7%] z-10">
             <div
-                class="bg-cloudyfi lg:w-5/12 2xl:w-4/12 aspect-[364/101] bg-cover bg-no-repeat bg-center lg:ml-[20%] 2xl:ml-[25%]">
+                class="relative bg-cloudyfi w-[154px] sm:w-52 md:w-96 2xl:w-1/3 aspect-[364/101] bg-cover bg-no-repeat bg-center mx-auto -left-5 lg:left-0 2xl:ml-[30%]">
             </div>
             <h1
-                class="text-center lg:text-4xl xl:text-[40px] 2xl:text-[44px] xl:leading-[54px] text-customGray-200 text-shadow">
+                class="text-center text-base sm:text-lg md:text-3xl lg:text-4xl xl:text-[40px] 2xl:text-[44px] xl:leading-[54px] text-customGray-200 text-shadow">
                 მიიღე მაღალი წარმადობის <br> უკაბელო ქსელი (WiFi), იქ <br> სადაც ხარ!</h1>
             <button
-                class="w-fit mt-7 px-[18px] py-[14px] self-center text-[20px] text-customGray-900 bg-customGray-200 rounded-[10px] shadow-card">სერვისები</button>
+                class="w-fit mt-7 text-sm px-[16px] md:px-[18px] py-[10px] md:py-[14px] self-center lg:text-xl text-customGray-900 bg-customGray-200 rounded-[10px] shadow-card transition-all duration-300
+                       hover:bg-gradient-to-t hover:text-white hover:font-bold hover:from-blue hover:to-purple">სერვისები</button>
         </div>
-        <section class="relative mt-[25%] 2xl:mt-[31%]">
+        <section class="relative mt-[30%] md:mt-[25%] 2xl:mt-[31%]">
             <h2>ჩვენ შესახებ</h2>
-            <div class="card">
-                <p class="text-2xl text-center text-customBlack-900">
+            <div class="card px-2 xs:px-7 md:px-14">
+                <p class="text-xs sm:text-lg md:text-xl lg:text-2xl text-center text-customBlack-900">
                     ქლაუდიფაი არის მაღალკვალიფიციური კადრებით დაკომპლექტებული გუნდი, რომლის მიზანია მომხმარებელს სერვისი გაუწიოს
                     ხარისხიანი უკაბელო ქსელის (WiFi) მიმართულებით. დაუგეგმოს, გაუმართოს და მხარი დაუჭიროს WiFi-ის წარმატებით ფუნქციონირებაში.
                 </p>
             </div>
         </section>
-        <section class="relative mt-[150px]">
+        <section class="relative mt-16 md:mt-[150px]">
             <h2>სერვისები</h2>
-            <div class="flex flex-wrap justify-center gap-x-[125px] px-[12%] 2xl:px-[15%]">
-                <div class="card flex flex-col items-center mx-0 px-6 pt-9 pb-5 w-64 min-h-[256px]">
-                    <img class="w-[76px]" src="./assets/serviceLogo1.svg" alt="">
-                    <p class="pt-4 text-center text-customBlack-900">
+            <div class="flex flex-wrap justify-center gap-x-10 md:gap-x-[125px] px-4 lg:px-[12%] 2xl:px-[15%] max-w-[1800px] 2xl:mx-auto">
+                <div class="card w-3/4 xs:w-5/12 flex flex-col items-center mx-0 px-6 py-10 xs:p-3 sm:px-6 sm:pt-9 sm:pb-5 sm:w-64 xs:min-h-[148px] sm:min-h-[256px]">
+                    <img class="w-14 xs:w-9 sm:w-[76px]" src="./assets/serviceLogo1.svg" alt="">
+                    <p class="pt-6 xs:pt-4 text-xs xs:text-[10px] sm:text-base text-center text-customBlack-900">
                         უკვე არსებული მოწყობილობების მართვა და მიბმა cloudyfi-ს სერვისებთან
                     </p>
                 </div>
-                <div class="card flex flex-col items-center mx-0 px-6 pt-9 pb-5 w-64 min-h-[256px]">
-                    <img class="w-[76px]" src="./assets/serviceLogo2.svg" alt="">
-                    <p class="pt-4 text-center text-customBlack-900">
+                <div class="card w-3/4 xs:w-5/12 flex flex-col items-center mx-0 px-6 py-10 xs:p-3 sm:px-6 sm:pt-9 sm:pb-5 sm:w-64 xs:min-h-[148px] sm:min-h-[256px]">
+                    <img class="w-14 xs:w-9 sm:w-[76px]" src="./assets/serviceLogo2.svg" alt="">
+                    <p class="pt-6 xs:pt-4 text-xs xs:text-[10px] sm:text-base text-center text-customBlack-900">
                         უკაბელო ქსელის (WiFi) დაგეგმარება, გამართვა, მონიტორინგი და მხარდაჭერა
                     </p>
                 </div>
-                <div class="card flex flex-col items-center mx-0 px-6 pt-9 pb-5 w-64 min-h-[256px]">
-                    <img class="w-[76px]" src="./assets/serviceLogo3.svg" alt="">
-                    <p class="pt-4 text-center text-customBlack-900">
+                <div class="card w-3/4 xs:w-5/12 flex flex-col items-center mx-0 px-6 py-10 xs:p-3 sm:px-6 sm:pt-9 sm:pb-5 sm:w-64 xs:min-h-[148px] sm:min-h-[256px]">
+                    <img class="w-14 xs:w-9 sm:w-[76px]" src="./assets/serviceLogo3.svg" alt="">
+                    <p class="pt-6 xs:pt-4 text-xs xs:text-[10px] sm:text-base text-center text-customBlack-900">
                         ერთჯერადი WiFi პაროლების პოლიტიკის დანერგვა
                     </p>
                 </div>
-                <div class="card flex flex-col items-center mx-0 px-6 pt-9 pb-5 w-64 min-h-[256px]">
-                    <img class="w-[76px]" src="./assets/serviceLogo4.svg" alt="">
-                    <p class="pt-4 text-center text-customBlack-900">
+                <div class="card w-3/4 xs:w-5/12 flex flex-col items-center mx-0 px-6 py-10 xs:p-3 sm:px-6 sm:pt-9 sm:pb-5 sm:w-64 xs:min-h-[148px] sm:min-h-[256px]">
+                    <img class="w-14 xs:w-9 sm:w-[76px]" src="./assets/serviceLogo4.svg" alt="">
+                    <p class="pt-6 xs:pt-4 text-xs xs:text-[10px] sm:text-base text-center text-customBlack-900">
                         ბრენდირებული სტუმრის პორტალის გამართვა
                     </p>
                 </div>
-                <div class="card flex flex-col items-center mx-0 px-6 pt-9 pb-5 w-64 min-h-[256px]">
-                    <img class="w-[76px]" src="./assets/serviceLogo5.svg" alt="">
-                    <p class="pt-4 text-center text-customBlack-900">
+                <div class="card w-3/4 xs:w-5/12 flex flex-col items-center mx-0 px-6 py-10 xs:p-3 sm:px-6 sm:pt-9 sm:pb-5 sm:w-64 xs:min-h-[148px] sm:min-h-[256px]">
+                    <img class="w-14 xs:w-9 sm:w-[76px]" src="./assets/serviceLogo5.svg" alt="">
+                    <p class="pt-6 xs:pt-4 text-xs xs:text-[10px] sm:text-base text-center text-customBlack-900">
                         WiFi-ს სახელისა თუ პაროლების ცვლილება
                     </p>
                 </div>
             </div>
         </section>
-        <section class="relative mt-[150px]">
+        <section class="relative mt-16 md:mt-[150px]">
             <h2>მომსახურების პაკეტები</h2>
-            <div class="flex flex-wrap justify-center gap-x-[125px] px-[12%] 2xl:px-[15%]">
-                <div class="card flex flex-col items-center mx-0 px-[30px] py-11 w-72 min-h-[256px]">
-                    <p class="text-center text-xl text-customBlack-900">
+            <div class="flex flex-wrap justify-center gap-x-7 md:gap-x-[125px] px-4 lg:px-[6%] 2xl:px-[12%] max-w-[1800px] 2xl:mx-auto">
+                <div class="card xs:w-5/12 xl:h-1/4 max-w-[200px] xs:max-w-[288px] flex flex-col items-center mx-0 p-10 xs:px-2 sm:px-8 sm:py-11 min-w-[150px] max-h-[256px]">
+                    <p class="text-center text-xs xs:text-[10px] sm:text-base lg:text-xl text-customBlack-900">
                         1-5 <br> მოწყობილობამდე
                     </p>
-                    <p class="card w-auto text-xl mt-7 px-7 py-4">
+                    <button class="card w-auto mx-3 text-xs sm:text-base mt-7 px-4 py-2 sm:px-7 sm:py-4 hover:shadow-cardHover transition-all duration-75">
                         &#8382;20 / თვე
-                    </p>
+                    </button>
                 </div>
-                <div class="card flex flex-col items-center mx-0 px-[30px] py-11 w-72 min-h-[256px]">
-                    <p class="text-center text-xl text-customBlack-900">
+                <div class="card xs:w-5/12 xl:h-1/4 max-w-[200px] xs:max-w-[288px] flex flex-col items-center mx-0 p-10 xs:px-2 sm:px-8 sm:py-11 min-w-[150px] max-h-[256px]">
+                    <p class="text-center text-xs xs:text-[10px] sm:text-base lg:text-xl text-customBlack-900">
                         5-15 <br> მოწყობილობამდე
                     </p>
-                    <p class="card w-auto text-xl mt-7 px-7 py-4">
+                    <button class="card w-auto mx-3 text-xs sm:text-base mt-7 px-4 py-2 sm:px-7 sm:py-4 hover:shadow-cardHover transition-all duration-75">
                         &#8382;50 / თვე
-                    </p>
+                    </button>
                 </div>
-                <div class="card flex flex-col items-center mx-0 px-[30px] py-11 w-72 min-h-[256px]">
-                    <p class="text-center text-xl text-customBlack-900">
+                <div class="card xs:w-1/2 xl:h-1/4 max-w-[200px] xs:max-w-[288px] flex flex-col items-center mx-0 p-10 xs:px-2 sm:px-8 sm:py-11 min-w-[150px] max-h-[256px]">
+                    <p class="text-center text-xs xs:text-[10px] sm:text-base lg:text-xl text-customBlack-900">
                         15+ <br> მოწყობილობა
                     </p>
-                    <p class="card w-auto text-xl mt-7 px-7 py-4">
+                    <button class="card w-auto mx-0 text-xs sm:text-base mt-7 px-4 py-2 sm:px-7 sm:py-4 hover:shadow-cardHover transition-all duration-75">
                         დაგვიკავშირდი
-                    </p>
+                    </button>
                 </div>
             </div>
         </section>
-        <section class="relative mt-[150px]">
+        <section class="relative mt-16 md:mt-[150px]">
             <h2>დაგვიკავშირდი</h2>
-            <div class="flex mt-[75px] mx-24">
-                <div class="mt-[152px] w-1/2">
+            <div class="flex flex-col-reverse lg:flex-row lg:mt-[75px] mx-6 lg:w-[92%] lg:mx-auto xl:w-[85%] max-w-[1600px]">
+                <div class="mt-9 lg:mt-[152px] lg:w-1/2 lg:ml-28">
                     <div class="flex items-center">
-                        <img src="./assets/phone.svg" alt="">
-                        <span class="ml-14 uppercase text-2xl font-openSans">Phone</span>
-                        <span class="ml-14 text-2xl font-openSans">+995 599 56 56</span>
+                        <img class="w-6 sm:w-8 lg:w-10" src="./assets/phone.svg" alt="">
+                        <span class="ml-3 sm:ml-6 lg:ml-10 uppercase sm:text-lg lg:text-xl font-normal font-openSans">Phone</span>
+                        <span class="ml-3 sm:ml-6 lg:ml-10 sm-text-lg lg:text-xl font-normal font-openSans">+995 599 56 56</span>
                     </div>
-                    <div class="flex mt-14 items-center">
-                        <img src="./assets/email.svg" alt="">
-                        <span class="ml-14 uppercase text-2xl font-openSans">Email</span>
-                        <span class="ml-16 text-2xl font-openSans">Cloudify@gmail.com</span>
+                    <div class="flex mt-3 lg:mt-14 items-center">
+                        <img class="w-6 sm:w-8 lg:w-10" src="./assets/email.svg" alt="">
+                        <span class="ml-3 sm:ml-6 lg:ml-10 uppercase sm:text-lg lg:text-xl font-normal font-openSans">Email</span>
+                        <span class="ml-3 sm:ml-6 lg:ml-10 sm-text-lg lg:text-xl font-normal font-openSans">Cloudify@gmail.com</span>
                     </div>
                 </div>
-                <form class="card mt-0 w-1/2 px-7 py-8">
-                    <label class="block ml-2 mb-[14px] text-xl" for="fullName">სახელი:</label>
-                    <input class="w-full text-xl mb-[14px] px-5 py-3 rounded-[12px] shadow-input" type="text" name="fullName" placeholder="სახელი">
-                    <label class="block ml-2 mb-[14px] text-xl" for="email">შენი ელ-ფოსტა:</label>
-                    <input class="w-full text-xl mb-[14px] px-5 py-3 rounded-[12px] shadow-input" type="email" name="email" placeholder="ელ-ფოსტა">
-                    <label class="block ml-2 mb-[14px] text-xl" for="title">სათაური:</label>
-                    <input class="w-full text-xl mb-[14px] px-5 py-3 rounded-[12px] shadow-input" type="text" name="title" placeholder="სათაური">
-                    <label class="block ml-2 mb-[14px] text-xl" for="message">შეტყობინება:</label>
-                    <textarea class="w-full text-xl px-5 py-3 rounded-[12px] shadow-input" name="message" cols="30" rows="10" placeholder="შეიყვანეთ ტექსტი"></textarea>
-                    <button class="relative card mt-4 px-8 py-3 w-auto text-white text-xl bg-customGray-800 left-full -translate-x-full border-none" type="submit">გაგზავნა</button>
+                <form class="mt-9 w-full card mx-0 lg:mt-0 lg:w-1/2 px-5 lg:px-7 lg:py-8">
+                    <label class="block ml-2 mb-3 text-xs lg:text-sm" for="fullName">სახელი:</label>
+                    <input class="w-full text-xs lg:text-sm mb-3 px-5 py-3 rounded-[12px] shadow-input" type="text" name="fullName" placeholder="სახელი">
+                    <label class="block ml-2 mb-3 text-xs lg:text-sm" for="email">შენი ელ-ფოსტა:</label>
+                    <input class="w-full text-xs lg:text-sm mb-3 px-5 py-3 rounded-[12px] shadow-input" type="email" name="email" placeholder="ელ-ფოსტა">
+                    <label class="block ml-2 mb-3 text-xs lg:text-sm" for="title">სათაური:</label>
+                    <input class="w-full text-xs lg:text-sm mb-3 px-5 py-3 rounded-[12px] shadow-input" type="text" name="title" placeholder="სათაური">
+                    <label class="block ml-2 mb-3 text-xs lg:text-sm" for="message">შეტყობინება:</label>
+                    <textarea class="w-full text-xs lg:text-sm px-5 py-3 rounded-[12px] shadow-input" name="message" cols="30" rows="7" placeholder="შეიყვანეთ ტექსტი"></textarea>
+                    <div class="flex justify-end">
+                        <button class="relative card mx-0 mt-4 px-8 py-3 w-auto text-white text-xs lg:text-sm bg-customGray-800 border-none transition-all duration-75 hover:bg-black" type="submit">გაგზავნა</button>
+                    </div>
                 </form>
             </div>
         </section>
-        <footer class="flex flex-col items-center mt-40 mx-24 border-t-2 border-footer">
-            <div class="flex mt-12">
-                <img class="mr-7" src="./assets/facebook.svg" alt="">
-                <img class="mr-7" src="./assets/instagram.svg" alt="">
-                <img src="./assets/linkedin.svg" alt="">
+        <footer class="flex flex-col items-center mt-12 lg:mt-40 mx-16 lg:mx-24 border-t-2 border-footer">
+            <div class="flex mt-9 lg:mt-12">
+                <img class="mr-7 w-5 sm:w-7 lg:w-auto" src="./assets/facebook.svg" alt="">
+                <img class="mr-7 w-5 sm:w-7 lg:w-auto" src="./assets/instagram.svg" alt="">
+                <img class="w-5 sm:w-7 lg:w-auto" src="./assets/linkedin.svg" alt="">
             </div>
-            <div class="flex mt-8 mb-10">
-                <img class="w-8 h-8 mr-2" src="./assets/copyright.svg" alt="">
-                <p class="text-2xl font-alkSanet">2023 ყველა უფლება დაცულია</p>
+            <div class="flex items-center mt-8 mb-10">
+                <img class="w-5 h-5 lg:w-8 lg:h-8 mr-2" src="./assets/copyright.svg" alt="">
+                <p class="text-xs sm:text-base lg:text-2xl font-alkSanet">2023 ყველა უფლება დაცულია</p>
             </div>
         </footer>
     </main>

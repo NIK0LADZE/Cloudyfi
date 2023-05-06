@@ -5,7 +5,7 @@
 
 @layer base {
     h2 {
-        @apply  relative text-5xl font-alkSanet text-customBlack-100 text-center font-bold overflow-hidden mx-24
+        @apply  relative w-[90%] text-xl max-w-[1640px] sm:text-3xl md:text-4xl lg:text-5xl font-alkSanet text-customBlack-100 text-center font-bold overflow-hidden mx-auto
                 before:content-[''] before:absolute before:-ml-[52%] before:top-1/2 before:w-1/2 before:h-[2px] before:bg-customGray-300
                 after:content-[''] after:absolute after:ml-[2%] after:top-1/2 after:w-1/2 after:h-[2px] after:bg-customGray-300;
     }
@@ -29,7 +29,7 @@
 
 @layer components {
     .menu-item {
-        @apply text-xs lg:text-base leading-8 cursor-pointer;
+        @apply text-xs lg:text-sm cursor-pointer;
     }
 
     .text-shadow {
@@ -37,6 +37,6 @@
     }
 
     .card {
-        @apply mt-[100px] w-2/3 xl:w-7/12 2xl:w-2/5 mx-auto px-14 pt-11 pb-16 bg-white bg-opacity-40 backdrop-blur-sm border rounded-[20px] shadow-card;
+        @apply mt-9 px-7 py-5 md:mt-[100px] w-auto mx-9 sm:mx-28 md:w-3/4 lg:w-2/3 xl:w-7/12 2xl:w-2/5 md:mx-auto md:px-14 md:pt-11 md:pb-16 bg-white bg-opacity-40 backdrop-blur-sm border rounded-[20px] shadow-card;
     }
 }

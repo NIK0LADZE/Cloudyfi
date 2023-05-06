@@ -6,6 +6,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      screens: {
+        xs: '360px'
+      },
       fontFamily: {
         notoSansGeorgian: 'Noto Sans Georgian',
         openSans: 'Open Sans',
@@ -32,7 +35,11 @@ module.exports = {
       backgroundImage: {
         logo: 'url(../assets/logo.svg)',
         shapes: 'url(../assets/shapes.svg)',
+        shapesMobile: 'url(../assets/shapesMobile.svg)',
         cloudyfi: 'url(../assets/cloudyfi.svg)'
+      },
+      backgroundSize: {
+        full: '100%'
       },
       boxShadow: {
         header: '0px 2px 4px rgba(148, 148, 148, 0.25)',

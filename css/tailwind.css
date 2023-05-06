@@ -4,20 +4,14 @@
 @tailwind utilities;
 
 @layer base {
-    html {
-        font-family: "Noto Sans Georgian SemiBold", sans-serif;
-    }
-
     h2 {
-        font-family: "Alk Sanet", sans-serif;
-
-        @apply  relative text-5xl text-customBlack-100 text-center font-bold overflow-hidden mx-24
+        @apply  relative text-5xl font-alkSanet text-customBlack-100 text-center font-bold overflow-hidden mx-24
                 before:content-[''] before:absolute before:-ml-[52%] before:top-1/2 before:w-1/2 before:h-[2px] before:bg-customGray-300
                 after:content-[''] after:absolute after:ml-[2%] after:top-1/2 after:w-1/2 after:h-[2px] after:bg-customGray-300;
     }
 
     p {
-        font-family: "Noto Sans Georgian Medium", sans-serif;
+        @apply font-normal;
     }
 
     textarea::-webkit-resizer {
@@ -35,7 +29,7 @@
 
 @layer components {
     .menu-item {
-        @apply py-4 text-base leading-8 cursor-pointer;
+        @apply text-xs lg:text-base leading-8 cursor-pointer;
     }
 
     .text-shadow {

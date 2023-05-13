@@ -30,7 +30,8 @@ module.exports = {
           900: '#222222',
         },
         blue: '#6263E3',
-        purple: '#9312F8'
+        purple: '#9312F8',
+        purpleLight: 'rgba(120, 83, 133, 0.7)'
       },
       backgroundImage: {
         logo: 'url(../assets/logo.svg)',

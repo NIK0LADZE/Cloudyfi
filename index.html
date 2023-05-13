@@ -7,7 +7,6 @@
     <title>Cloudyfi</title>
     <link rel="stylesheet" href="./css/tailwind.css">
     <script type="module" src="/src/alpine.js"></script>
-    <script src="./src/index.js"></script>
 </head>
 <body class="bg-customGray-100 font-notoSansGeorgian font-semibold bg-shapesMobile lg:bg-shapes bg-no-repeat bg-full bg-top" x-data="">
     <header
@@ -17,10 +16,10 @@
             <div class="bg-logo w-logoMobile lg:w-logo bg-no-repeat bg-center bg-contain"></div>
             <nav class="hidden xs:block">
                 <ul class="flex h-full items-center">
-                    <li class="hidden lg:block mr-8 menu-item" @click="scrollIntoView($refs.aboutUs, $refs.header)">ჩვენ შესახებ</li>
-                    <li class="mr-3 lg:mr-8 menu-item" @click="scrollIntoView($refs.services, $refs.header)">სერვისები</li>
-                    <li class="mr-3 lg:mr-8 menu-item" @click="scrollIntoView($refs.packages, $refs.header)">პაკეტები</li>
-                    <li class="menu-item" @click="scrollIntoView($refs.contact, $refs.header)">დაგვიკავშირდი</li>
+                    <li class="hidden lg:block mr-8 menu-item" @click="$scrollTo($refs.aboutUs)">ჩვენ შესახებ</li>
+                    <li class="mr-3 lg:mr-8 menu-item" @click="$scrollTo($refs.services)">სერვისები</li>
+                    <li class="mr-3 lg:mr-8 menu-item" @click="$scrollTo($refs.packages)">პაკეტები</li>
+                    <li class="menu-item" @click="$scrollTo($refs.contact)">დაგვიკავშირდი</li>
                 </ul>
             </nav>
         </div>
@@ -34,7 +33,7 @@
                 class="text-center text-base sm:text-lg md:text-3xl lg:text-4xl xl:text-[40px] 2xl:text-[44px] xl:leading-[54px] text-customGray-200 text-shadow">
                 მიიღე მაღალი წარმადობის <br> უკაბელო ქსელი (WiFi), იქ <br> სადაც ხარ!</h1>
             <button
-                @click="scrollIntoView($refs.services, $refs.header)"
+                @click="$scrollTo($refs.services)"
                 class="w-fit mt-7 text-sm px-[16px] md:px-[18px] py-[10px] md:py-[14px] self-center lg:text-xl text-customGray-900 bg-customGray-200 rounded-[10px] shadow-card transition-all duration-300
                        xl:hover:bg-gradient-to-t xl:hover:text-white xl:hover:font-bold xl:hover:from-blue xl:hover:to-purple">სერვისები</button>
         </div>
@@ -89,7 +88,7 @@
                     <p class="text-center text-xs xs:text-[10px] sm:text-base lg:text-xl text-customBlack-900">
                         1-5 <br> მოწყობილობამდე
                     </p>
-                    <button @click="scrollIntoView($refs.contact, $refs.header)" class="card w-auto mx-3 text-xs sm:text-base mt-7 px-4 py-2 sm:px-7 sm:py-4 xl:hover:shadow-cardHover transition-all duration-75">
+                    <button @click="$scrollTo($refs.contact)" class="card w-auto mx-3 text-xs sm:text-base mt-7 px-4 py-2 sm:px-7 sm:py-4 xl:hover:shadow-cardHover transition-all duration-75">
                         &#8382;20 / თვე
                     </button>
                 </div>
@@ -97,7 +96,7 @@
                     <p class="text-center text-xs xs:text-[10px] sm:text-base lg:text-xl text-customBlack-900">
                         5-15 <br> მოწყობილობამდე
                     </p>
-                    <button @click="scrollIntoView($refs.contact, $refs.header)" class="card w-auto mx-3 text-xs sm:text-base mt-7 px-4 py-2 sm:px-7 sm:py-4 xl:hover:shadow-cardHover transition-all duration-75">
+                    <button @click="$scrollTo($refs.contact)" class="card w-auto mx-3 text-xs sm:text-base mt-7 px-4 py-2 sm:px-7 sm:py-4 xl:hover:shadow-cardHover transition-all duration-75">
                         &#8382;50 / თვე
                     </button>
                 </div>
@@ -105,7 +104,7 @@
                     <p class="text-center text-xs xs:text-[10px] sm:text-base lg:text-xl text-customBlack-900">
                         15+ <br> მოწყობილობა
                     </p>
-                    <button @click="scrollIntoView($refs.contact, $refs.header)" class="card w-auto mx-0 text-xs sm:text-base mt-7 px-4 py-2 sm:px-7 sm:py-4 xl:hover:shadow-cardHover transition-all duration-75">
+                    <button @click="$scrollTo($refs.contact)" class="card w-auto mx-0 text-xs sm:text-base mt-7 px-4 py-2 sm:px-7 sm:py-4 xl:hover:shadow-cardHover transition-all duration-75">
                         დაგვიკავშირდი
                     </button>
                 </div>

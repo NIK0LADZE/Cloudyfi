@@ -13,7 +13,7 @@ Alpine.magic('scrollTo', (_, { evaluate }) => {
 Alpine.magic('sendEmail', (formElement) => {
     return async () => {
         const formData = Object.fromEntries(new FormData(formElement));
-        const response = await fetch("http://localhost:3000/api", {
+        const response = await fetch(import.meta.env.VITE_API_URL, {
             method: "POST",
             body: JSON.stringify(formData),
             headers: {
@@ -28,8 +28,8 @@ Alpine.magic('sendEmail', (formElement) => {
         const { message } = await response.json();
 
         if (response.ok) {
+            formElement.reset();
             return { success: response.ok, message };
-            // formElement.reset();
         } else {
             return { success: response.ok, message };
         }

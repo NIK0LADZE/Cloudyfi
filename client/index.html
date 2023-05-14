@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="./css/tailwind.css">
     <script type="module" src="/src/alpine.js"></script>
 </head>
-<body class="bg-customGray-100 font-notoSansGeorgian font-semibold bg-shapesMobile lg:bg-shapes bg-no-repeat bg-full bg-top" x-data="">
+<body class="bg-customGray-100 font-notoSansGeorgian font-semibold bg-shapesMobile lg:bg-shapes bg-no-repeat bg-full bg-top" x-data="{ response: {success: '', message: ''}, isLoading: false }">
     <header
         x-ref="header"
         class="flex justify-center fixed top-0 w-full h-14 lg:h-16 bg-white bg-opacity-40 backdrop-blur-sm z-20 shadow-header">
@@ -125,17 +125,24 @@
                         <span class="ml-3 sm:ml-6 lg:ml-10 sm-text-lg lg:text-xl font-normal font-openSans">Cloudify@gmail.com</span>
                     </div>
                 </div>
-                <form class="mt-9 w-full card mx-0 lg:mt-0 lg:w-1/2 px-5 lg:px-7 lg:py-8">
+                <form class="mt-9 w-full card mx-0 lg:mt-0 lg:w-1/2 px-5 lg:px-7 lg:py-8" @submit.prevent="isLoading = true; response = await $sendEmail(); isLoading = false;">
                     <label class="block ml-2 mb-3 text-xs lg:text-sm" for="fullName">სახელი:</label>
                     <input class="w-full text-xs lg:text-sm mb-3 px-5 py-3 rounded-[12px] shadow-input" type="text" name="fullName" placeholder="სახელი">
                     <label class="block ml-2 mb-3 text-xs lg:text-sm" for="email">შენი ელ-ფოსტა:</label>
-                    <input class="w-full text-xs lg:text-sm mb-3 px-5 py-3 rounded-[12px] shadow-input" type="email" name="email" placeholder="ელ-ფოსტა">
+                    <input class="w-full text-xs lg:text-sm mb-3 px-5 py-3 rounded-[12px] shadow-input" type="text" name="email" placeholder="ელ-ფოსტა">
                     <label class="block ml-2 mb-3 text-xs lg:text-sm" for="title">სათაური:</label>
                     <input class="w-full text-xs lg:text-sm mb-3 px-5 py-3 rounded-[12px] shadow-input" type="text" name="title" placeholder="სათაური">
                     <label class="block ml-2 mb-3 text-xs lg:text-sm" for="message">შეტყობინება:</label>
                     <textarea class="w-full text-xs lg:text-sm px-5 py-3 rounded-[12px] shadow-input resize-none" name="message" cols="30" rows="7" placeholder="შეიყვანეთ ტექსტი"></textarea>
-                    <div class="flex justify-end">
-                        <button class="relative card mx-0 mt-4 px-8 py-3 w-auto text-white text-xs lg:text-sm bg-customGray-800 border-none transition-all duration-75 xl:hover:bg-purpleLight" type="submit">გაგზავნა</button>
+                    <div class="flex justify-between mt-4 items-center">
+                        <span x-text="response.message" :class="response.success ? 'text-green-500' : 'text-red-600'"></span>
+                        <button
+                          class="relative card mx-0 mt-0 px-8 py-3 w-auto text-white text-xs lg:text-sm bg-customGray-800 border-none transition-all duration-75 xl:hover:bg-purpleLight disabled:cursor-not-allowed disabled:hover:bg-customGray-800 disabled:opacity-60"
+                          :disabled="isLoading"
+                          x-text="isLoading ? 'იგზავნება...' : 'გაგზავნა'"
+                          type="submit"
+                        >
+                        </button>
                     </div>
                 </form>
             </div>

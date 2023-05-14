@@ -10,6 +10,28 @@ Alpine.magic('scrollTo', (_, { evaluate }) => {
     };
 })
 
+Alpine.magic('sendEmail', (formElement) => {
+    return async () => {
+        const formData = Object.fromEntries(new FormData(formElement));
+        const response = await fetch("http://localhost:3000/", {
+            method: "POST",
+            body: JSON.stringify(formData),
+            headers: {
+                "Content-type": "application/json; charset=UTF-8"
+            }
+        });
+
+        const { message } = await response.json();
+
+        if (response.ok) {
+            return { success: response.ok, message };
+            // formElement.reset();
+        } else {
+            return { success: response.ok, message };
+        }
+    };
+})
+
 window.Alpine = Alpine
 
 Alpine.start()

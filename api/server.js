@@ -5,6 +5,7 @@ const bodyParser = require('body-parser');
 const nodemailer = require('nodemailer');
 const formData = require('express-form-data');
 const app = express();
+const router = express.Router();
 
 app.use(cors());
 app.use(bodyParser.json());
@@ -23,7 +24,7 @@ const transporter = nodemailer.createTransport({
     }
 });
 
-app.post('/', (req, res) => {
+router.post('/', (req, res) => {
     const { body: { fullName = '', email = '', title = '', message = ''  } = {} } = req;
 
     for (const [key, value] of Object.entries(req.body)) {
@@ -64,6 +65,8 @@ app.post('/', (req, res) => {
         }
     });
 });
+
+app.use('/api', router);
 
 const port = process.env.PORT || 3000;
 

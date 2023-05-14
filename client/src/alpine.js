@@ -13,13 +13,17 @@ Alpine.magic('scrollTo', (_, { evaluate }) => {
 Alpine.magic('sendEmail', (formElement) => {
     return async () => {
         const formData = Object.fromEntries(new FormData(formElement));
-        const response = await fetch("http://localhost:3000/", {
+        const response = await fetch("http://localhost:3000/api", {
             method: "POST",
             body: JSON.stringify(formData),
             headers: {
                 "Content-type": "application/json; charset=UTF-8"
             }
         });
+
+        if (response.status === 404) {
+            return { success: response.ok, message: '' };
+        }
 
         const { message } = await response.json();
 

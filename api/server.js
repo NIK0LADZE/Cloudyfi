@@ -57,6 +57,7 @@ router.post('/', (req, res) => {
 
     transporter.sendMail(mailOptions, (err) => {
         if (err) {
+            console.log(err);
             res.status(502).json({
                 message: 'დაფიქსირდა შეცდომა შეტყობინების გაგზავნისას!'
             });

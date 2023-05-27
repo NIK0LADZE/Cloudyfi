@@ -131,13 +131,13 @@
                 </div>
                 <form class="mt-9 w-full card mx-0 lg:mt-0 lg:w-1/2 px-5 lg:px-7 lg:py-8" @submit.prevent="isLoading = true; response = await $sendEmail(); isLoading = false;">
                     <label class="block ml-2 mb-3 text-xs lg:text-sm" for="fullName">სახელი:</label>
-                    <input class="w-full text-xs lg:text-sm mb-3 px-5 py-3 rounded-[12px] shadow-input" type="text" name="fullName" placeholder="სახელი">
+                    <input @click="response.message = ''" class="w-full text-xs lg:text-sm mb-3 px-5 py-3 rounded-[12px] shadow-input" type="text" name="fullName" placeholder="სახელი">
                     <label class="block ml-2 mb-3 text-xs lg:text-sm" for="email">შენი ელ-ფოსტა:</label>
-                    <input class="w-full text-xs lg:text-sm mb-3 px-5 py-3 rounded-[12px] shadow-input" type="text" name="email" placeholder="ელ-ფოსტა">
+                    <input @click="response.message = ''" class="w-full text-xs lg:text-sm mb-3 px-5 py-3 rounded-[12px] shadow-input" type="text" name="email" placeholder="ელ-ფოსტა">
                     <label class="block ml-2 mb-3 text-xs lg:text-sm" for="title">სათაური:</label>
-                    <input class="w-full text-xs lg:text-sm mb-3 px-5 py-3 rounded-[12px] shadow-input" type="text" name="title" placeholder="სათაური">
+                    <input @click="response.message = ''" class="w-full text-xs lg:text-sm mb-3 px-5 py-3 rounded-[12px] shadow-input" type="text" name="title" placeholder="სათაური">
                     <label class="block ml-2 mb-3 text-xs lg:text-sm" for="message">შეტყობინება:</label>
-                    <textarea class="w-full text-xs lg:text-sm px-5 py-3 rounded-[12px] shadow-input resize-none" name="message" cols="30" rows="7" placeholder="შეიყვანეთ ტექსტი"></textarea>
+                    <textarea @click="response.message = ''" class="w-full text-xs lg:text-sm px-5 py-3 rounded-[12px] shadow-input resize-none" name="message" cols="30" rows="7" placeholder="შეიყვანეთ ტექსტი"></textarea>
                     <div class="flex justify-between mt-4 items-center">
                         <span x-text="response.message" :class="response.success ? 'text-green-500' : 'text-red-600'"></span>
                         <button

@@ -29,18 +29,18 @@ router.post('/', (req, res) => {
 
     for (const [key, value] of Object.entries(req.body)) {
         if (key !== 'fullName' && key !== 'email' && key !== 'title' && key !== 'message') {
-            res.status(400).json({ message: 'Invalid request!' });
+            res.status(400).json({ message: 'არასწორი მოთხოვნა!' });
             return;
         }
 
         if (value === '') {
-            res.status(400).json({ message: 'Please fill out all fields!' });
+            res.status(400).json({ message: 'გთხოვთ, შეავსოთ ყველა ველი!' });
             return;
         }
     }
 
     if (!email.match(/^([\w.%+-]+)@([\w-]+\.)+([\w]{2,})$/i)) {
-        res.status(400).json({ message: 'Invalid Email format!' });
+        res.status(400).json({ message: 'არასწორი ელ-ფოსტა!' });
         return;
     }
 
@@ -57,10 +57,12 @@ router.post('/', (req, res) => {
 
     transporter.sendMail(mailOptions, (err) => {
         if (err) {
-            console.log("Error " + err);
+            res.status(502).json({
+                message: 'დაფიქსირდა შეცდომა შეტყობინების გაგზავნისას!'
+            });
         } else {
             res.status(200).json({
-                message: 'Email was sent successfully!'
+                message: 'შეტყობინება წარმატებით გაიგზავნა!'
             });
         }
     });

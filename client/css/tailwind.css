@@ -29,7 +29,43 @@
 
 @layer components {
     .menu-item {
-        @apply text-xs lg:text-sm cursor-pointer;
+        @apply text-xs lg:text-sm cursor-pointer lg:hover:text-blue;
+
+        &:nth-child(1) {
+            &.active {
+                @apply text-blue;
+                ~ .menu-hover {
+                    @apply lg:left-0 lg:w-[128px];
+                }
+            }
+        }
+
+        &:nth-child(2) {
+            &.active {
+                @apply text-blue;
+                ~ .menu-hover {
+                    @apply left-0 w-[83px] lg:left-[128px] lg:w-[110px];
+                }
+            }
+        }
+
+        &:nth-child(3) {
+            &.active {
+                @apply text-blue;
+                ~ .menu-hover {
+                    @apply left-[83px] w-[75px] lg:left-[238px] lg:w-[100px];
+                }
+            }
+        }
+
+        &:nth-child(4) {
+            &.active {
+                @apply text-blue;
+                ~ .menu-hover {
+                    @apply left-[158px] w-[118px] lg:left-[338px] lg:w-[150px];
+                }
+            }
+        }
     }
 
     .text-shadow {
